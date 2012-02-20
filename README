@@ -2,7 +2,69 @@
 :::::
 
 http://lesscss.org/ 
+for this ^
 
 
+vendor prefixes from css3please mostly for {less}
+other things too yay
 
-.round-box(10px) 
+#zomg_i_am_a_ball {
+	height: 30px;
+	width: 30px;
+	.round-box(30px);
+}
+
+also:
+
+.round-left(12px);
+.round-right(3px);
+.round-top(10px, 2px);
+.round-bottom(44px, 22px);
+
+^ these ones take an optional second argument that sets the rounding for
+  the other corners
+
+all the .round-* ones also come in a .round-box-noclip style for the 
+  fashionable modern user who doesn't want background-clip:padding-box;
+
+.border-radius() takes a single argument like:
+	.border-radius(2px 5px 12px 44px)
+just like normal border-radius. returns lovely prefixed version.
+  (also has a -noclip version)
+
+
+.box-shadow() just like box-shadow.
+.box-gradient(fromColour, toColour); goes from top to bottom.
+
+.box-rgba(r, g, b, alpha) <- this took forever and is incredibly ugly but 
+  will give you an rgba'd background-color that works right down to IE6 
+  even though it nearly killed me
+
+ .rotate(120deg)  <- transform: rotate(120deg); (defaults to 180deg actually)
+
+ .scale(0.7) <- defaults to factor of 0.5
+
+ .transform() <- for other transforms
+
+ .3dtransform(perspective, rotate) <- iunno it was on css3please wev
+
+.transition(property, duration, easing) like a boss ( defaults to all, 0.3s, ease-in-out)
+
+.opacity(0.5) defaults to 0.9 (works down to ie6 yay i like carrots)
+
+.background-size(100% 50%) or whatever. defaults to 100% 100% because that's for real
+
+.column-count(columns, gap) defaults to 2 and 15px. man this is so awesome I can't wait til we are living in the future and opera 11.1 and ie10 are in use and this shit just works omg it's so good
+
+.animation(), .animation-delay(), .animation-direction(), .animation-duration(), .animation-iteration-count(), name, .animation-play-state(), .animation-timing-function(), .animation-fill-mode() shortcuts for thems, no defaults soz chicken
+
+.tabsize(tabsize) defaults to 2
+
+.colorize( "/img/lol.png", rgba(123,233,12,0.5) ) inspired by divya's colorize from her scss snippets https://gist.github.com/1857529 . this was actually originally called nimbupani.less before I abandoned the idea of trying to translate the rest of those.
+
+also included is .colourise() which uses the same syntax and does the same thing 
+ except it's written in english
+
+that's all for now
+
+lots of love and ✢⍳⥇⒗扉特䘣祁礵悀ቁݔጇ剰吒䂆ፈȱ䂆፰刕㑗ᔥ┧牷✧牲拒涺殪홪춦춬봢☭噝噜♞ꚺ蜙
